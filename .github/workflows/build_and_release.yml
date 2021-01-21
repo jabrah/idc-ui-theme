@@ -36,6 +36,7 @@ jobs:
           yarn --frozen-lockfile
 
       - name: Build project
+        working-directory: ./js
         run: yarn build
 
       # Bundle everything together, including compiled assets
