@@ -39,13 +39,12 @@ jobs:
         working-directory: ./js
         run: yarn build
 
-      - name: Report parent
-        working-directory: ../
-        run: pwd
-
       # Bundle everything together, including compiled assets
       - name: Package
-        run: zip -r dist.zip ./ -x *node_modules*
+        run: |
+          cd ..
+          zip -r dist.zip idc-ui-theme/ -x *node_modules*
+          mv dist.zip idc-ui-theme/
 
       #       - name: Package components
       #         run: zip -r packages/glimmer-idc/dist.zip packages/glimmer-idc/dist/
