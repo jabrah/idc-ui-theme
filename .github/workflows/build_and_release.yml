@@ -41,7 +41,7 @@ jobs:
 
       # Bundle everything together, including compiled assets
       - name: Package
-        run: zip -r dist.zip .
+        run: zip -r dist.zip ./ -x *node_modules*
 
       #       - name: Package components
       #         run: zip -r packages/glimmer-idc/dist.zip packages/glimmer-idc/dist/
