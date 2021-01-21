@@ -39,6 +39,10 @@ jobs:
         working-directory: ./js
         run: yarn build
 
+      - name: Report parent
+        working-directory: ../
+        run: pwd
+
       # Bundle everything together, including compiled assets
       - name: Package
         run: zip -r dist.zip ./ -x *node_modules*
