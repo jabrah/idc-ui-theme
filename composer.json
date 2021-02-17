@@ -1,6 +1,6 @@
 {
-  "name": "jhu-idc/idc-ui-theme",
+  "name": "jabrah/idc-ui-theme",
   "type": "drupal-theme",
-  "description": "Moo",
+  "description": "This is a repackage of another package for testing workflows",
   "require": {}
 }
